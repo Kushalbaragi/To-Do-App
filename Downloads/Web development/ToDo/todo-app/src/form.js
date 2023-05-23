@@ -8,18 +8,16 @@ function Form({ todo }) {
     todo(value);
     setValue('');
   };
+
+  function changeHandler(event){
+    setValue(event.target.value);
+  }
   return (
     <form onSubmit={hadlesubmit}>
       <div className="input-box">
-        <input
-          type="text"
-          value={value}
-          placeholder="Enter your task"
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
-        ></input>
-        <button type="submit">Add</button>
+        <input type="text" value={value} onChange={changeHandler}/>
+      
+        <button className="add">Add</button>
       </div>
     </form>
   );

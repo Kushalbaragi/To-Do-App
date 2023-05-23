@@ -1,35 +1,26 @@
-import React from 'react'
+import React from "react";
 
-function List(task) {
+function List({ tasks, deleteHandler}) {
+  console.log(tasks);
+  function clickHandler(e){
+   tasks.pop();
+   console.log(e);
+   deleteHandler(tasks);
+  }
+
+  let lists=tasks.map((task, index) => {
+    return (
+        <><li key={index}>{task}</li>
+        <button className="edit">EDIT</button>
+        <button onClick={clickHandler} className="delete">DELETE</button>
+        </>
+    );
+  })
   return (
-    
-    <table>
-        <thead >
-            <td>number</td>
-            <td>name</td>
-            <td Style= "background-color:white; color:black"> middle name</td>
-            <td>surname</td>
-        </thead>
-        <tr>
-        <td>number</td>
-            <td>name</td>
-            <td>middle name</td>
-            <td>surname</td> 
-        </tr>
-        <tr>
-        <td>number</td>
-            <td>name</td>
-            <td>middle name</td>
-            <td>surname</td> 
-        </tr>
-        <tr>
-        <td>number</td>
-            <td>name</td>
-            <td>middle name</td>
-            <td>surname</td> 
-        </tr>
-    </table>
-  )
+    <ul className="taskList">
+      {lists}
+    </ul>
+  );
 }
 
-export default List
+export default List;

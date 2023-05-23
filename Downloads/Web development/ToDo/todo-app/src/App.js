@@ -4,9 +4,13 @@ import List from "./List";
 
 function App() {
   const [value, setValue] = useState([]);
-  function todoHandler(e) {
-    setValue([...value, e]);
-    //  console.log(value);
+
+  function todoHandler(inputValue) {
+    setValue([...value, inputValue]);
+  }
+
+  function deleteHandler(updatedValues){
+    setValue([...updatedValues]);
   }
 
   return (
@@ -14,13 +18,7 @@ function App() {
       <div className="todo-wrapper">
         <h1>To Do App</h1>
         <Form todo={todoHandler} />
-        <List task='hey' />
-      {value.map((task, index)=>{
-               <Form todo={todoHandler} />
-
-        {console.log(task);}
-      })}
-       
+        <List tasks={value} deleteHandler={deleteHandler}/>
       </div>
     </section>
   );
