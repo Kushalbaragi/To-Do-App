@@ -1,0 +1,36 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.todo-wrapper{
+ background-color: #603fef;
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+    .todo-container{
+        min-width: 250px;
+        border-radius: 10px;
+        background-color: white;
+        margin: 0 120px;
+        padding: 20px;
+        max-width: 1440px;
+        @media screen and (min-width:801px){
+       margin: 0 21px;
+       padding: 40px;
+       max-width: 801px;
+       min-width: 400px;
+
+
+        }
+        h2{
+           text-align: center;
+        }
+
+    }
+
+}
