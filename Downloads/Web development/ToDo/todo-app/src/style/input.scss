@@ -20,3 +20,36 @@
         background-color: black;
     }
 }
+
+.editInput{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid black;
+    input{
+        width: 70%;
+        border: 0;
+        outline: 0;
+        padding: 0 5px;
+    }
+    .action-wrapper{
+        border: 0;
+        outline: 0;
+    button{
+        padding: 4px 10px;
+        border: 0;
+        outline: 0;
+        background: black;
+        color: white; 
+        &:nth-child(2n){
+            background-color: white;
+            color: black;
+        }
+    }
+    }
+}
+
+.taskBlock{
+    background-color: #603fef;
+}
