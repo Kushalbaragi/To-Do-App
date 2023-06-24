@@ -1,5 +1,6 @@
 import React,{useContext, useState}from 'react'
 import InputField from './inputField'
+import EditInput from './editInput';
 
 function Task({taskList,editHandler,deleteHandler}) {
   let [show,setShow]=useState(false);
@@ -8,7 +9,7 @@ function Task({taskList,editHandler,deleteHandler}) {
     console.log(text);
     console.log(id);
 
-    // ()=>editHandler(task.id)
+    // ()=>editHandler(task.id);
 
   }
 
@@ -16,12 +17,12 @@ function Task({taskList,editHandler,deleteHandler}) {
   if(taskList.length>0){
   return <div className='taskList'>
     {taskList.map(task=>{
-      return <div className='taskBlock' key={task.id}>
+      return <><div className='taskBlock' key={task.id}>
          <span>{task.task}</span>
          <span onClick={()=>setShow(!show)}>EDIT</span>
          <span onClick={()=>deleteHandler(task.id)}>DELETE</span>
-         {show && <InputField id={task.id} inputHandler={clickHandler}/>}
       </div>
+      {show && <EditInput/>}</>
     })}
   </div>
   }

@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing:border-box;
 }
+button{
+    cursor: pointer;
+}
 
 .todo-wrapper{
  background-color: #603fef;
@@ -23,7 +26,7 @@
        margin: 0 21px;
        padding: 40px;
        max-width: 801px;
-       min-width: 400px;
+       min-width: 500px;
 
 
         }
