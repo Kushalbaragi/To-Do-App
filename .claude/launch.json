@@ -5,7 +5,7 @@
       "name": "expense-tracker",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "cwd": "/Users/kushalbaragi/Downloads/Kushal Expense Tracker/.claude/worktrees/vibrant-blackwell-be1dd7/expense-tracker",
+      "cwd": "/Users/kushalbaragi/Downloads/Kushal Expense Tracker/.claude/worktrees/awesome-robinson-3aa608/expense-tracker",
       "port": 5173
     }
   ]
