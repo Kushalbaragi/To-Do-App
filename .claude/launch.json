@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "expense-tracker",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/kushalbaragi/Downloads/Kushal Expense Tracker/.claude/worktrees/vibrant-blackwell-be1dd7/expense-tracker",
+      "port": 5173
+    }
+  ]
+}
